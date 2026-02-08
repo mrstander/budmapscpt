@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useSession } from 'next-auth/react';
-import { getAvailableDeliveriesStats, getCompletedDeliveriesStats, getDriverStatus, toggleDriverStatus, getDriverMonthlyEarnings, getActiveDeliveriesStats } from '@/lib/actions/driver-actions';
+import { getAvailableDeliveriesStats, getCompletedDeliveriesStats, getDriverStatus, toggleDriverStatus, getDriverMonthlyEarnings, getActiveDeliveriesStats, getDriverOrders } from '@/lib/actions/driver-actions';
 import { format } from 'date-fns';
 
 function AvailableDeliveriesStats() {
