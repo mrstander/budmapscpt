@@ -3,7 +3,7 @@
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
 import { query } from '@/lib/db';
-import pool from '@/lib/db';
+import getPool from '@/lib/db';
 import bcrypt from 'bcryptjs';
 import { z } from 'zod';
 import crypto from 'crypto';
@@ -75,7 +75,7 @@ export async function register(formData: FormData) {
         const hashedPassword = await bcrypt.hash(password, 10);
         const id = crypto.randomUUID();
 
-        const connection = await pool.getConnection();
+        const connection = await getPool().getConnection();
         try {
             await connection.beginTransaction();
 

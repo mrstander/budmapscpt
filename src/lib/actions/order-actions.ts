@@ -1,7 +1,7 @@
 'use server';
 
 import { query } from "@/lib/db";
-import pool from "@/lib/db";
+import getPool from "@/lib/db";
 import { auth } from "@/auth";
 import { z } from "zod";
 import { CartItem, OrderItem } from "@/lib/types";
@@ -60,7 +60,7 @@ export async function placeOrder(data: PlaceOrderParams) {
     const DELIVERY_FEE = 50.00;
     const COMMISSION_RATE = 0.055;
 
-    const connection = await pool.getConnection();
+    const connection = await getPool().getConnection();
     try {
         await connection.beginTransaction();
 

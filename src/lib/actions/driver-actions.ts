@@ -291,6 +291,9 @@ export async function arriveAtVendor(orderId: string) {
             WHERE id = ?
         `, [orderId]);
         revalidatePath('/driver/dashboard/deliveries');
+        revalidatePath('/driver/dashboard');
+        revalidatePath('/vendor/dashboard/orders');
+        revalidatePath('/vendor/dashboard');
         return { success: true };
     } catch (error: any) {
         console.error("Error arriving at vendor:", error);
@@ -309,6 +312,9 @@ export async function arriveAtCustomer(orderId: string) {
             WHERE id = ?
         `, [orderId]);
         revalidatePath('/driver/dashboard/deliveries');
+        revalidatePath('/driver/dashboard');
+        revalidatePath('/vendor/dashboard/orders');
+        revalidatePath('/vendor/dashboard');
         return { success: true };
     } catch (error: any) {
         console.error("Error arriving at customer:", error);
@@ -328,6 +334,8 @@ export async function completeOrder(orderId: string) {
         `, [orderId]);
         revalidatePath('/driver/dashboard/deliveries');
         revalidatePath('/driver/dashboard');
+        revalidatePath('/vendor/dashboard/orders');
+        revalidatePath('/vendor/dashboard');
         return { success: true };
     } catch (error: any) {
         console.error("Error completing order:", error);

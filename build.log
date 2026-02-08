@@ -1,0 +1,43 @@
+
+> nextn@0.1.0 build
+> NODE_ENV=production next build
+
+   ▲ Next.js 15.5.9
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ (pwa) Compiling for server...
+ ✓ (pwa) Compiling for server...
+ ✓ (pwa) Compiling for client (static)...
+ ○ (pwa) Service worker: /Users/gavinstander/Desktop/budmaps2/budmaps/public/sw.js
+ ○ (pwa)   URL: /sw.js
+ ○ (pwa)   Scope: /
+ ✓ Compiled successfully in 43s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/40) ...
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+CartProvider mounting
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/vendor/register". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at g (/Users/gavinstander/Desktop/budmaps2/budmaps/.next/server/chunks/7639.js:1:107339)
+    at m (/Users/gavinstander/Desktop/budmaps2/budmaps/.next/server/chunks/7639.js:19:15999)
+    at v (/Users/gavinstander/Desktop/budmaps2/budmaps/.next/server/app/vendor/register/page.js:1:8560)
+    at n3 (/Users/gavinstander/Desktop/budmaps2/budmaps/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:82831)
+    at n6 (/Users/gavinstander/Desktop/budmaps2/budmaps/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:84601)
+    at n5 (/Users/gavinstander/Desktop/budmaps2/budmaps/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:104801)
+    at n7 (/Users/gavinstander/Desktop/budmaps2/budmaps/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:102219)
+    at n8 (/Users/gavinstander/Desktop/budmaps2/budmaps/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:83183)
+    at n6 (/Users/gavinstander/Desktop/budmaps2/budmaps/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:84647)
+    at n6 (/Users/gavinstander/Desktop/budmaps2/budmaps/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:101560)
+Error occurred prerendering page "/vendor/register". Read more: https://nextjs.org/docs/messages/prerender-error
+Export encountered an error on /vendor/register/page: /vendor/register, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

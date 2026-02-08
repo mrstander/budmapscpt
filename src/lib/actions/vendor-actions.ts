@@ -3,7 +3,7 @@
 import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
 import { query } from "@/lib/db";
-import pool from "@/lib/db";
+import getPool from "@/lib/db";
 import crypto from "crypto";
 
 const serializeDate = (date: any): string | null => {
@@ -405,7 +405,7 @@ export async function importProducts(dispensaryId: string, products: any[]) {
     const session = await auth();
     if (!session?.user?.id) return { error: "Not authenticated" };
 
-    const connection = await pool.getConnection();
+    const connection = await getPool().getConnection();
     try {
         await connection.beginTransaction();
 
